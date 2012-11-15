@@ -1,0 +1,5 @@
+apt.postgresql.org.gpg*
+debian/files
+debian/pgdg-keyring.debhelper.log
+debian/pgdg-keyring.substvars
+debian/pgdg-keyring/

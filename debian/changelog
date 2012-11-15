@@ -1,0 +1,5 @@
+pgdg-keyring (2012.1) sid-pgdg; urgency=low
+
+  * Initial release.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 15 Nov 2012 22:47:49 +0100

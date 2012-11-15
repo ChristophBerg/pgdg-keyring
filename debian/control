@@ -1,0 +1,24 @@
+Source: pgdg-keyring
+Section: database
+Priority: optional
+Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Uploaders: Christoph Berg <myon@debian.org>
+Standards-Version: 3.9.3
+Build-Depends: gnupg, debhelper (>> 9)
+Homepage: http://apt.postgresql.org/
+Vcs-Browser: http://anonscm.debian.org/loggerhead/pkg-postgresql/postgresql-9.2/trunk
+Vcs-Bzr: http://bzr.debian.org/bzr/pkg-postgresql/postgresql-9.2/trunk/
+
+Package: pgdg-keyring
+Architecture: all
+Depends: ${misc:Depends}
+Description: keyring for apt.postgresql.org
+ The PostgreSQL Global Development Group (PGDG) provides an archive of
+ PostgreSQL server and extension modules packages for various Debian and Ubuntu
+ releases at http://apt.postgresql.org/pub/repos/apt/. It complements the
+ packages in those distributions by offering all PostgreSQL server versions
+ supported by the PGDG compiled for all releases, as well as server extension
+ modules for a broad range of server version/distribution combinations.
+ .
+ This package contains the public key used for signing the repository. It
+ should be installed on all hosts using the repository.
