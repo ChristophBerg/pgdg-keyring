@@ -11,7 +11,7 @@ Vcs-Bzr: http://bzr.debian.org/bzr/pkg-postgresql/postgresql-9.2/trunk/
 
 Package: pgdg-keyring
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, apt
 Description: keyring for apt.postgresql.org
  The PostgreSQL Global Development Group (PGDG) provides an archive of
  PostgreSQL server and extension modules packages for various Debian and Ubuntu

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case $1 in
+	configure)
+		if apt-key --keyring /etc/apt/trusted.gpg list | grep -q ACCC4CF8; then
+			echo -n "Removing apt.postgresql.org key from trusted.gpg: "
+			apt-key --keyring /etc/apt/trusted.gpg remove ACCC4CF8
+		fi
+		echo -n "Importing apt.postgresql.org key: "
+		apt-key --keyring /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg \
+			add /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+		;;
+esac
+
+#DEBHELPER#
