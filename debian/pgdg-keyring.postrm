@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 case $1 in
 	purge)
 		rm -f /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg

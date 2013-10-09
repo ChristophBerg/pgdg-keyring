@@ -3,7 +3,7 @@ Section: database
 Priority: optional
 Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
 Uploaders: Christoph Berg <myon@debian.org>
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Build-Depends: gnupg, debhelper (>> 9)
 Homepage: http://apt.postgresql.org/
 Vcs-Browser: http://anonscm.debian.org/loggerhead/pkg-postgresql/postgresql-9.2/trunk

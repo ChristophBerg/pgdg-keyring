@@ -1,11 +1,11 @@
-pgdg-keyring (2013.1) UNRELEASED; urgency=low
+pgdg-keyring (2013.1) sid-pgdg; urgency=low
 
   * Extend key validity till 2016-02-24.
   * Install keyring to /usr/share/postgresql-common/pgdg/ and import it using
     apt-key --keyring /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg.
   * Remove our key from trusted.gpg if present so there are not two copies.
 
- -- Christoph Berg <myon@debian.org>  Sun, 24 Feb 2013 21:03:40 +0100
+ -- Christoph Berg <myon@debian.org>  Wed, 09 Oct 2013 23:06:40 +0200
 
 pgdg-keyring (2012.1) sid-pgdg; urgency=low
 

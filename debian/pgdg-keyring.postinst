@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 case $1 in
 	configure)
 		if apt-key --keyring /etc/apt/trusted.gpg list | grep -q ACCC4CF8; then
