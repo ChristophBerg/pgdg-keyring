@@ -8,6 +8,7 @@ case $1 in
 			echo -n "Removing apt.postgresql.org key from trusted.gpg: "
 			apt-key --keyring /etc/apt/trusted.gpg remove ACCC4CF8
 		fi
+		test -f /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg || touch /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg
 		echo -n "Importing apt.postgresql.org key: "
 		apt-key --keyring /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg \
 			add /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc

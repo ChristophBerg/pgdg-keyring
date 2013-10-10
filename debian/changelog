@@ -1,3 +1,10 @@
+pgdg-keyring (2013.2) sid-pgdg; urgency=low
+
+  * Squeeze's apt-key doesn't create keyrings automatically, touch the file
+    first.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Thu, 10 Oct 2013 14:01:15 +0200
+
 pgdg-keyring (2013.1) sid-pgdg; urgency=low
 
   * Extend key validity till 2016-02-24.
