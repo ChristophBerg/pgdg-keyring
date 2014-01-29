@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
 
+export:
+	gpg --export -a ACCC4CF8 > apt.postgresql.org.asc
+
+override_dh_auto_build:
+	gpg --no-default-keyring --keyring ./apt.postgresql.org.gpg --import apt.postgresql.org.asc
+	gpg --no-default-keyring --keyring ./apt.postgresql.org.gpg --list-sigs
+	rm ./apt.postgresql.org.gpg*
+
 %:
 	dh $@

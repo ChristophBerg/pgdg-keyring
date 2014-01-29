@@ -1,3 +1,9 @@
+pgdg-keyring (2014.1) sid-pgdg; urgency=medium
+
+  * Extend key validity till July 2019 past the EOL of Ubuntu trusty.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 29 Jan 2014 15:51:08 +0100
+
 pgdg-keyring (2013.2) sid-pgdg; urgency=low
 
   * Squeeze's apt-key doesn't create keyrings automatically, touch the file
