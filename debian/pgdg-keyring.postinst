@@ -2,16 +2,21 @@
 
 set -e
 
+KEYRING="/etc/apt/trusted.gpg.d/apt.postgresql.org.gpg"
+
 case $1 in
 	configure)
-		if apt-key --keyring /etc/apt/trusted.gpg list | grep -q ACCC4CF8; then
+		# remove older copy of key, if any
+		if apt-key --keyring /etc/apt/trusted.gpg list 2>/dev/null | grep -q ACCC4CF8; then
 			echo -n "Removing apt.postgresql.org key from trusted.gpg: "
 			apt-key --keyring /etc/apt/trusted.gpg remove ACCC4CF8
 		fi
-		test -f /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg || touch /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg
-		echo -n "Importing apt.postgresql.org key: "
-		apt-key --keyring /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg \
-			add /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+		if [ "$2" ] && dpkg --compare-versions "$2" lt "2017"; then
+			# convert remove old file so we can put the symlink in place
+			test -f $KEYRING && rm $KEYRING
+			rm -f "$KEYRING~"
+		fi
+		test -e $KEYRING || ln -s /usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg $KEYRING
 		;;
 esac
 

@@ -1,1 +1,2 @@
 apt.postgresql.org.asc usr/share/postgresql-common/pgdg
+apt.postgresql.org.gpg usr/share/postgresql-common/pgdg

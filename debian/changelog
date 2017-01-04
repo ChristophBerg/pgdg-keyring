@@ -1,3 +1,12 @@
+pgdg-keyring (2017.1) sid-pgdg; urgency=medium
+
+  * Extend key validity until infinity.
+  * Ship a static .gpg keyring in /usr/share/postgresql-common/pgdg/ and
+    symlink it from /etc/apt/trusted.gpg.d/ instead of importing it through
+    apt-key.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 04 Jan 2017 15:35:56 +0100
+
 pgdg-keyring (2014.1) sid-pgdg; urgency=medium
 
   * Extend key validity till July 2019 past the EOL of Ubuntu trusty.

@@ -1,12 +1,13 @@
 #!/usr/bin/make -f
 
-export:
-	gpg --export -a ACCC4CF8 > apt.postgresql.org.asc
+KEYID = B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 
 override_dh_auto_build:
-	gpg --no-default-keyring --keyring ./apt.postgresql.org.gpg --import apt.postgresql.org.asc
-	gpg --no-default-keyring --keyring ./apt.postgresql.org.gpg --list-sigs
-	rm ./apt.postgresql.org.gpg*
+	gpg --import apt.postgresql.org.asc
+	gpg --import apt.postgresql.org.gpg
+	gpg --export -a $(KEYID) > apt.postgresql.org.asc
+	gpg --export $(KEYID) > apt.postgresql.org.gpg
+	gpg --keyring ./apt.postgresql.org.gpg --list-sigs $(KEYID)
 
 %:
 	dh $@
