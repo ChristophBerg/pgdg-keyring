@@ -3,7 +3,7 @@ Section: database
 Priority: optional
 Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
 Uploaders: Christoph Berg <myon@debian.org>
-Standards-Version: 3.9.8
+Standards-Version: 4.1.1
 Build-Depends: gnupg, debhelper (>> 9)
 Homepage: https://apt.postgresql.org/
 Vcs-Browser: https://github.com/ChristophBerg/pgdg-keyring

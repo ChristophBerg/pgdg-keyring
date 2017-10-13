@@ -1,3 +1,11 @@
+pgdg-keyring (2017.2) sid-pgdg; urgency=medium
+
+  * postinst: Check for existence of /etc/apt/trusted.gpg before using
+    apt-key in order to avoid warnings from apt. Analysis and fix by
+    Tianon Gravi, many thanks for the patch!
+
+ -- Christoph Berg <myon@debian.org>  Fri, 13 Oct 2017 20:54:32 +0200
+
 pgdg-keyring (2017.1) sid-pgdg; urgency=medium
 
   * Extend key validity until infinity.
