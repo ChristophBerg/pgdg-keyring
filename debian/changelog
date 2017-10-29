@@ -1,3 +1,10 @@
+pgdg-keyring (2017.3) sid-pgdg; urgency=medium
+
+  * postinst: Also recognize key fingerprint when trying to remove key
+    duplicate from trusted.gpg. Spotted by Stefan Kaltenbrunner, thanks!
+
+ -- Christoph Berg <myon@debian.org>  Sun, 29 Oct 2017 16:28:23 +0100
+
 pgdg-keyring (2017.2) sid-pgdg; urgency=medium
 
   * postinst: Check for existence of /etc/apt/trusted.gpg before using
