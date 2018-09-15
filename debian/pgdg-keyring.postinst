@@ -6,6 +6,9 @@ KEYRING="/etc/apt/trusted.gpg.d/apt.postgresql.org.gpg"
 
 case $1 in
 	configure)
+		# we only execute "apt-key remove" if "apt-key list" reported
+		# the key, mute warning that we don't depend on gnupg
+		export APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=yeah
 		# remove older copy of key, if any
 		if [ -f /etc/apt/trusted.gpg ] && apt-key --keyring /etc/apt/trusted.gpg list 2>/dev/null | egrep -q 'ACCC.?4CF8'; then
 			echo -n "Removing apt.postgresql.org key from trusted.gpg: "
