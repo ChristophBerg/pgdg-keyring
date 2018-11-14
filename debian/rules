@@ -3,11 +3,11 @@
 KEYID = B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 
 override_dh_auto_build:
-	gpg --import apt.postgresql.org.asc
-	gpg --import apt.postgresql.org.gpg
-	gpg --export -a $(KEYID) > apt.postgresql.org.asc
-	gpg --export $(KEYID) > apt.postgresql.org.gpg
-	gpg --keyring ./apt.postgresql.org.gpg --list-sigs $(KEYID)
+	gpg --batch --import apt.postgresql.org.asc
+	gpg --batch --import apt.postgresql.org.gpg
+	gpg --batch --export -a $(KEYID) > apt.postgresql.org.asc
+	gpg --batch --export $(KEYID) > apt.postgresql.org.gpg
+	gpg --batch --keyring ./apt.postgresql.org.gpg --list-sigs $(KEYID)
 
 %:
 	dh $@
