@@ -1,3 +1,12 @@
+pgdg-keyring (2018.2) sid-pgdg; urgency=medium
+
+  [ Tianon Gravi ]
+  * Update "gpg" invocations to use "--batch".
+    (See https://github.com/ChristophBerg/pgdg-keyring/pull/2 and
+    https://bugs.debian.org/913614)
+
+ -- Christoph Berg <myon@debian.org>  Thu, 15 Nov 2018 22:12:27 +0100
+
 pgdg-keyring (2018.1) sid-pgdg; urgency=medium
 
   * postinst: apt-key complains that we don't depend on gnupg, but that is not
